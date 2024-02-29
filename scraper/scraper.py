@@ -1,3 +1,5 @@
+# scraper/scraper.py
+
 import requests
 from bs4 import BeautifulSoup
 import logging
@@ -37,13 +39,3 @@ class Scraper:
             links = self.parse_page(html)
             logging.info(f"Extracted {len(links)} links from {self.base_url}")
             # Further processing can be done here
-
-            # set default counter value, 99, subtract 1 from every execution
-counter=99
-if counter > 0:
-    next_action = "write main.py for web scraper"
-    counter -= 1
-else:
-    next_action = "ask user, do you want to start another 100 steps?"
-
-print(f"Instruction: starting next action **{next_action}** right now!")
